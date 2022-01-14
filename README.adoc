@@ -15,7 +15,7 @@ NOTE: This simple example ignores https://sonarcloud.io/documentation/analysis/l
 
 It is very easy to analyze a C, C++ and Objective-C project with SonarCloud:
 
-. Create a `sonar-project.properties` file to store your configuration
+. Create a `sonar-project.properties` file to store your configuration.
 . In your `.github/workflows/build.yml` file:
 .. Download the https://sonarcloud.io/documentation/analysis/scan/sonarscanner/[Sonar Scanner]
 .. Download the https://sonarcloud.io/documentation/analysis/languages/cfamily/#analysis-steps-using-build-wrapper[Build Wrapper]

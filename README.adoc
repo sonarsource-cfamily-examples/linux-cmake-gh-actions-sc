@@ -17,8 +17,7 @@ It is very easy to analyze a C, C++ and Objective-C project with SonarCloud and 
 
 . Create a `sonar-project.properties` file to store your configuration
 . In your `.github/workflows/build.yml` file:
-.. Download the https://docs.sonarcloud.io/advanced-setup/ci-based-analysis/sonarscanner-cli/[Sonar Scanner]
-.. Download the https://docs.sonarcloud.io/advanced-setup/languages/c-c-objective-c/#analysis-steps-using-build-wrapper[Build Wrapper]
+.. Download the Sonar Scanner and Build Wrapper using https://github.com/SonarSource/sonarcloud-github-c-cpp-addition[SonarCloud C/C++ Github Action]:
 .. Wrap your compilation with the Build Wrapper
 .. Run `sonar-scanner` as the final step
 . Ensure that your token is stored as a secret in your repository (`SONARCLOUD_TOKEN` in this example project). You can request new tokens using https://sonarcloud.io/account/security/[Account/Security page].

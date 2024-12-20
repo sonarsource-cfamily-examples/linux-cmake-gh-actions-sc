@@ -1,4 +1,4 @@
-= C++ example project scanned on SonarCloud using GitHub Actions
+= C++ example project scanned on SonarQube Cloud using GitHub Actions
 // URIs:
 :uri-qg-status: https://sonarcloud.io/dashboard?id=sonarsource-cfamily-examples_linux-cmake-gh-actions-sc
 :img-qg-status: https://sonarcloud.io/api/project_badges/measure?project=sonarsource-cfamily-examples_linux-cmake-gh-actions-sc&metric=alert_status
@@ -8,27 +8,27 @@
 image:{img-build-status}[Build Status, link={uri-build-status}]
 image:{img-qg-status}[Quality Gate Status,link={uri-qg-status}]
 
-*This project is analysed on https://sonarcloud.io/dashboard?id=sonarsource-cfamily-examples_linux-cmake-gh-actions-sc[SonarCloud]!*
+*This project is analysed on https://sonarcloud.io/dashboard?id=sonarsource-cfamily-examples_linux-cmake-gh-actions-sc[SonarQube Cloud]!*
 
 
-It is very easy to analyze a C, C++ and Objective-C project with SonarCloud and https://docs.sonarcloud.io/getting-started/github/[GitHub Actions]:
+It is very easy to analyze a C, C++ and Objective-C project with SonarQube Cloud and https://docs.sonarsource.com/sonarqube-cloud/getting-started/github/[GitHub Actions]:
 
 . Create a `sonar-project.properties` file to store your configuration
 . In your `.github/workflows/build.yml` file:
-.. Download the Sonar Scanner and Build Wrapper using https://github.com/SonarSource/sonarcloud-github-c-cpp[SonarCloud C and C++ Github Action]:
+.. Download the Build Wrapper using https://github.com/SonarSource/sonarqube-scan-action[the SonarSource/sonarqube-scan-action/install-build-wrapper action]
 .. Wrap your compilation with the Build Wrapper
-.. Run `sonar-scanner` as the final step
+.. Run the SonarQube scan using https://github.com/SonarSource/sonarqube-scan-action[the SonarSource/sonarqube-scan-action action] as final step
 . Ensure that your token is stored as a secret in your repository (`SONARCLOUD_TOKEN` in this example project). You can request new tokens using https://sonarcloud.io/account/security/[Account/Security page].
 
 You can take a look at the link:sonar-project.properties[sonar-project.properties] and link:.github/workflows/build.yml[build.yml] to see it in practice.
 
 = Documentation
 
-- https://docs.sonarcloud.io/advanced-setup/languages/c-c-objective-c/[Documentation overview of the C, C++ and Objective-C analyzer]
-- https://docs.sonarcloud.io/getting-started/github/[Documentation of using SonarCloud with GitHub]
-- https://docs.sonarcloud.io/advanced-setup/languages/c-family/prerequisites/#generating-a-compilation-database[Generating a compilation database (compile_commands.json)]
-- https://docs.sonarsource.com/sonarcloud/advanced-setup/languages/c-family/running-the-analysis/[Running the analysis in Compilation Database mode]
-- https://docs.sonarcloud.io/advanced-setup/ci-based-analysis/github-actions-for-sonarcloud/[GitHub Action for C and C++ usage]
+- https://docs.sonarsource.com/sonarqube-cloud/advanced-setup/languages/c-family/overview/[C/C++/Objective-C analysis overview]
+- https://docs.sonarsource.com/sonarqube-cloud/getting-started/github/[Getting started with GitHub]
+- https://docs.sonarsource.com/sonarqube-cloud/advanced-setup/ci-based-analysis/github-actions-for-sonarcloud/[Analyze your repository with GitHub Actions]
+- https://docs.sonarsource.com/sonarqube-cloud/advanced-setup/languages/c-family/prerequisites/#generating-a-compilation-database[Generating a compilation database]
+- https://docs.sonarsource.com/sonarqube-cloud/advanced-setup/languages/c-family/running-the-analysis/[Running the CFamily analysis]
 
 = Linux\CMake
 
@@ -46,7 +46,7 @@ make
 An example of a flawed C++ code. The https://github.com/sonarsource-cfamily-examples/code[code repository] can be https://github.com/sonarsource-cfamily-examples/automatic-analysis-sc[analyzed automatically], but it can also be compiled with different build systems using different CI pipelines on Linux, macOS, and Windows.
 
 The https://github.com/sonarsource-cfamily-examples/code[code repository] is forked into other repositories in https://github.com/sonarsource-cfamily-examples[this collection] to add a specific build system, platform, and CI.
-The downstream repositories are analyzed either with https://www.sonarqube.org/[SonarQube] or https://sonarcloud.io/[SonarCloud].
+The downstream repositories are analyzed either with https://www.sonarsource.com/products/sonarqube/[SonarQube Server] or https://www.sonarsource.com/products/sonarcloud/[SonarQube Cloud].
 
 You can find examples for:
 
@@ -73,8 +73,8 @@ Running on the following CI services:
 
 Configured for analysis on:
 
-* https://github.com/sonarsource-cfamily-examples?q=-sq[SonarQube]
-* https://github.com/sonarsource-cfamily-examples?q=-sc[SonarCloud]
+* https://github.com/sonarsource-cfamily-examples?q=-sq[SonarQube Server]
+* https://github.com/sonarsource-cfamily-examples?q=-sc[SonarQube Cloud]
 
 You can find also a few examples demonstrating:
 
